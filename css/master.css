@@ -1,0 +1,245 @@
+header .navbar {
+  box-shadow: 0 0 10px grey !important;
+}
+header .navbar .container .collapse .navbar-nav .nav-item a {
+  position: relative;
+  border: solid;
+  transition: 0.5s;
+  padding: 5px 18px;
+  border-radius: 300px;
+  border-color: transparent;
+  border-width: 3px;
+  &:hover {
+    border: solid rgb(43, 43, 235);
+  }
+}
+header .navbar .container .collapse .navbar-nav .nav-item a.active {
+  border: solid rgb(43, 43, 235);
+}
+main .containerWeather .container .searchSection {
+  position: relative;
+}
+main .containerWeather .container .searchSection input {
+  width: 100%;
+}
+main .containerWeather .container .searchSection button {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+main .containerWeather .container .detailsSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "currentDegree currentDegree currentDegree nextSevenDays"
+    "nextHours nextHours nextHours nextSevenDays"
+    "additionalSection additionalSection additionalSection nextSevenDays"
+    "footer footer footer nextSevenDays";
+  gap: 10px;
+}
+@media (max-width: 991px) {
+  main .containerWeather .container .detailsSection {
+    grid-template-areas:
+      "currentDegree currentDegree currentDegree currentDegree"
+      "nextHours nextHours nextHours nextHours"
+      "nextSevenDays nextSevenDays nextSevenDays nextSevenDays"
+      "additionalSection additionalSection additionalSection additionalSection"
+      "footer footer footer footer";
+  }
+}
+main .containerWeather .container .detailsSection .currentDegree {
+  grid-area: currentDegree;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .currentDegree
+  .countryAndDegree {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .currentDegree
+  .countryAndDegree
+  .country
+  h2 {
+  font-size: 30px;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .currentDegree
+  .countryAndDegree
+  .country
+  p {
+  color: grey;
+  margin-left: 20px;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .currentDegree
+  .countryAndDegree
+  .degree
+  p {
+  font-size: 50px;
+}
+main .containerWeather .container .detailsSection .currentDegree .logo img {
+  width: 150px;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .currentDegree
+  .countryAndDegree
+  .degree
+  p
+  sup {
+  font-size: 20px;
+  top: -35px;
+  left: -10px;
+}
+main .containerWeather .container .detailsSection .nextHours {
+  grid-area: nextHours;
+  width: 100%;
+}
+main .containerWeather .container .detailsSection .nextHours .allHours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .containerWeather .container .detailsSection .nextHours .allHours div img {
+  width: 100px;
+}
+main .containerWeather .container .detailsSection .nextHours .allHours div h4,
+main .containerWeather .container .detailsSection .nextHours .allHours div p {
+  color: grey;
+}
+main .containerWeather .container .detailsSection .nextHours .allHours div p {
+  font-size: 30px;
+}
+main .containerWeather .container .detailsSection .nextHours .allHours div sup {
+  font-size: 10px;
+  top: -20px;
+  left: 0px;
+}
+main .containerWeather .container .detailsSection .additionalSection {
+  grid-area: additionalSection;
+  width: 100%;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .additionalSection
+  .Additional {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .additionalSection
+  .Additional
+  p {
+  font-size: 50px;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .additionalSection
+  .Additional
+  p
+  span.text-secondary {
+  font-size: 20px;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .additionalSection
+  .Additional
+  p
+  span
+  sup {
+  font-size: 10px;
+  top: -35px;
+  left: -10px;
+}
+main .containerWeather .container .detailsSection .nextSevenDays {
+  grid-area: nextSevenDays;
+  width: 100%;
+}
+main .containerWeather .container .detailsSection .nextSevenDays .days {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+main .containerWeather .container .detailsSection .nextSevenDays .days div {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+main
+  .containerWeather
+  .container
+  .detailsSection
+  .nextSevenDays
+  .days
+  div
+  div
+  img {
+  margin-right: 8px;
+}
+main .containerWeather .container .detailsSection .nextSevenDays .days div p {
+  margin: unset;
+}
+main .containerWeather .container .detailsSection .footer {
+  grid-area: footer;
+}
+main .containerWeather .container .detailsSection .footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+main .containerWeather .container .detailsSection .footer div .searchSection {
+  flex-grow: 1;
+}
+main .containerWeather .container .detailsSection .footer div .icons span {
+  display: inline-block;
+  padding: 12px 16px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  transition: 0.4s;
+  &:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+  }
+}

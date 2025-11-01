@@ -1,0 +1,63 @@
+header .navbar {
+  box-shadow: 0 0 10px grey !important;
+}
+header .navbar .container .collapse .navbar-nav .nav-item a {
+  position: relative;
+  border: solid;
+  transition: 0.5s;
+  padding: 5px 18px;
+  border-radius: 300px;
+  border-color: transparent;
+  border-width: 3px;
+  &:hover {
+    border: solid rgb(43, 43, 235);
+  }
+}
+header .navbar .container .collapse .navbar-nav .nav-item a.active {
+  border: solid rgb(43, 43, 235);
+}
+#HomeA:hover{
+  text-decoration: underline !important;
+}
+.container .searchSection {
+  position: relative;
+}
+.container .searchSection input {
+  width: 100%;
+}
+.container .searchSection button {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+.container .footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container .footer div .searchSection {
+  flex-grow: 1;
+}
+.container .footer div .icons span {
+  display: inline-block;
+  padding: 12px 16px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  transition: 0.4s;
+  &:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+  }
+}
+@media (max-width: 767px) {
+  .contactContainer{
+    flex-wrap: wrap;
+  }
+}
