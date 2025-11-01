@@ -39,16 +39,53 @@ function searchInput() {
 searchBtn.addEventListener("click", searchInput);
 
 function displayData() {
-  countryName.innerHTML = "";
-  countryReg.innerHTML = "";
-  countryDeg.innerHTML = "";
-  countryName.innerHTML = `${weatherDetails.location.name}`;
-  countryReg.innerHTML = `${weatherDetails.location.tz_id}`;
-  countryDeg.innerHTML = `${weatherDetails.current.temp_c}`;
-  countryCurrentLogo.setAttribute(
-    "src",
-    `https:${weatherDetails.current.condition.icon}`
-  );
+  currentDegreeContainer.innerHTML = "";
+
+  let countryAndDegree = document.createElement("div");
+  let countryDiv = document.createElement("div");
+  let countryNameHeading = document.createElement("h2");
+  let countryRegion = document.createElement("p");
+  let degreeDiv = document.createElement("div");
+  let paragraph = document.createElement("p");
+  let countryDegree = document.createElement("span");
+  let degreeIconSup = document.createElement("sup");
+  let degreeIcon = document.createElement("i");
+  let logoContainer = document.createElement("div");
+  let logoImage = document.createElement("img");
+
+  countryAndDegree.setAttribute("class","countryAndDegree");
+  countryDiv.setAttribute("class","country");
+  countryNameHeading.setAttribute("id","countryName");
+  countryRegion.setAttribute("id","countryReg");
+  degreeDiv.setAttribute("class","degree");
+  countryDegree.setAttribute("id","countryDeg");
+  degreeIcon.setAttribute("class","fa-regular fa-circle");
+  logoContainer.setAttribute("class","logo align-content-center");
+  logoImage.alt = "current weather";
+  logoImage.setAttribute("id","countryCurrentLogo")
+
+  countryNameHeading.innerHTML = `${weatherDetails.location.name}`;
+  countryRegion.innerHTML = `${weatherDetails.location.tz_id}`;
+  countryDegree.innerHTML = `${weatherDetails.current.temp_c}`;
+  logoImage.src = `https:${weatherDetails.current.condition.icon}`;
+
+  countryDiv.append(countryNameHeading);
+  countryDiv.append(countryRegion);
+
+  degreeDiv.append(paragraph);
+
+  paragraph.append(countryDegree);
+  paragraph.append(degreeIconSup);
+
+  degreeIconSup.append(degreeIcon);
+
+  countryAndDegree.append(countryDiv);
+  countryAndDegree.append(degreeDiv);
+
+  logoContainer.append(logoImage);
+
+  currentDegreeContainer.append(countryAndDegree);
+  currentDegreeContainer.append(logoContainer);
 }
 
 let currentTime = new Date();
@@ -142,3 +179,4 @@ function displayNextSevenDay() {
   }
 
 }
+
