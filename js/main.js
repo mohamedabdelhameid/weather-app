@@ -57,6 +57,9 @@ let currentHour = currentTime.toString().split(" ")[4].split(":")[0];
 function displayHours() {
   allHours.innerHTML = "";
   for (let i = +currentHour; i < +currentHour + 6; i++) {
+    if(i == 24){
+      break;
+    }
     let div = document.createElement("div");
     let headingFour = document.createElement("h4");
     let logoImg = document.createElement("img");
@@ -137,4 +140,5 @@ function displayNextSevenDay() {
     allDays.append(container);
     allDays.append(hor);
   }
+
 }
