@@ -10,6 +10,7 @@ let windKmh = document.getElementById("windKmh");
 let UVDeg = document.getElementById("UVDeg");
 let humidityDeg = document.getElementById("humidityDeg");
 let allDays = document.getElementById("allDays");
+let currentDegreeContainer = document.getElementById("currentDegreeContainer");
 
 let weatherDetails = [];
 let country = "giza";
@@ -183,5 +184,6 @@ function displayNextSevenDay() {
   }
 
 }
+
 
 
