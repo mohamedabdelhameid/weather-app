@@ -30,7 +30,11 @@ async function getWeather() {
 getWeather();
 
 function searchInput() {
-  country = locationInput.value;
+  if(locationInput.value.trim() != ""){
+    country = locationInput.value;
+  } else {
+    alert("Enter the country to show details");
+  }
 
   locationInput.value = "";
   getWeather();
@@ -179,4 +183,5 @@ function displayNextSevenDay() {
   }
 
 }
+
 
